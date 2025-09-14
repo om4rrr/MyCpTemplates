@@ -218,5 +218,4 @@ void solve()
         int u, v; cin >> u >> v;
         cout << (Get_Hash(u, v) == Get_Hash(v, u)) << endl;
     }
-
 }
