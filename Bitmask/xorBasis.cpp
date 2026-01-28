@@ -36,7 +36,7 @@ struct XorBasis {
         return x == 0;
     }
 
-    int getMin(int x) {
+    int minimize(int x) {
         int ret = x;
         for (int i = B - 1; i >= 0; --i) {
             if ( ret >> i & 1 && basis[i] ) ret ^= basis[i];
