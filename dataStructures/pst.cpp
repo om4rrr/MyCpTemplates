@@ -1,7 +1,7 @@
 struct Node {
-  int val;
-  Node *left, *right;
-  Node() : val(0), left(nullptr), right(nullptr) {}
+  int val{};
+  Node *left{}, *right{};
+  Node() {}
   Node(int val) : val(val), left(nullptr), right(nullptr) {}
   Node(Node *l, Node *r) {
     left = l, right = r;
