@@ -60,3 +60,17 @@ struct PST {
     return query(roots[id], 0, n - 1, l, r).val;
   }
 };
+
+int kth(Node *u, Node *v, int l, int r, int k) {
+  if (l == r)
+    return l;
+  int mid = (l + r) / 2;
+  int sum_left = u->left->val - v->left->val;
+  if (sum_left >= k)
+    return kth(u->left, v->left, l, mid, k);
+  return kth(u->right, v->right, mid + 1, r, k - sum_left);
+}
+
+int kth(int u, int v, int k) { // kth after sorting from v to u , u > v
+  return kth(roots[u], roots[v], 0, n - 1, k);
+}
