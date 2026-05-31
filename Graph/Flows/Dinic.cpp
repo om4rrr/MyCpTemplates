@@ -1,10 +1,9 @@
 // O(V^2 * E)
 // O(E * Sqrt(V)) in maximum matching problem (Unit Networks)
-static const int OO = 1e18;
+static const int OO = 4e18;
 
 struct Edge {
   int u, v, cap = 0, flow = 0;
-  Edge(int u, int v) : u(u), v(v) {}
   Edge(int u, int v, int cap) : u(u), v(v), cap(cap) {}
 };
 
